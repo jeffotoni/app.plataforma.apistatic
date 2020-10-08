@@ -1,4 +1,4 @@
-module github.com/jeffotoni/app.platform.apistatic
+module github.com/jeffotoni/app.plataforma.apistatic
 
 go 1.15
 
