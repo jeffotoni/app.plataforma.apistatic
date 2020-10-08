@@ -6,6 +6,7 @@ import (
 	"strings"
 
 	_ "github.com/jeffotoni/app.plataforma.apistatic/statik"
+	//_ "./statik"
 	"github.com/rakyll/statik/fs"
 )
 
