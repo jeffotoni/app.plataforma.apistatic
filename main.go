@@ -6,12 +6,11 @@ import (
 	"strings"
 
 	_ "github.com/jeffotoni/app.plataforma.apistatic/statik"
-	//_ "./statik"
 	"github.com/rakyll/statik/fs"
 )
 
 var (
-	port = ":8080"
+	HTTP_PORT = ":8080"
 )
 
 func main() {
@@ -26,10 +25,9 @@ func main() {
 
 	mux.HandleFunc("/ping", Ping)
 
-	// mostra no browser localhost:8080/static
 	mux.Handle("/", http.StripPrefix("/", DisabledFs(fs)))
-	log.Println("Run Server:", port)
-	http.ListenAndServe(port, mux)
+	println("Run Server:", HTTP_PORT)
+	http.ListenAndServe(HTTP_PORT, mux)
 }
 
 func Ping(w http.ResponseWriter, r *http.Request) {
